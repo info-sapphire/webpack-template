@@ -34,12 +34,13 @@ npm run build
   - `assets`:
     - `scss`: put custom SCSS styles here.
     - `css`: the same as above but CSS here.
+    - `fonts`: put your font here.
     - `images`: put your images here.
   - `js`: put your custom scripts here.
   - `static`: folder with extra static assets that will be copied into output folder.
   - `main.js`: your main entry point, you may import all required libs here.
 
-## Main config path:
+## Config paths:
 You may easy reconfigurate path to move all files.
 ``` js
 const PATHS = {
@@ -54,7 +55,7 @@ const PATHS = {
 };
 ```
 
-## Customize config path:
+## Customize paths:
 Change output folders:
 ``` js
 const PATHS = {
@@ -66,7 +67,7 @@ const PATHS = {
 
 ## Import js files:
 1. Create another js module in `./src/js/` folder
-2. Import modules in `./src/main.js` or another entry
+2. Import modules in `./src/main.js` or another entry:
 
 ``` js
 // import js module for example
@@ -108,7 +109,8 @@ now you can use it as:
 import icon from '~/assets/icons/icon.svg';
 ```
 
-if you want you can set the output folder for the imported images
+if you want you can set the output folder for the imported images:
+
 ``` js
 ...
     options: {
@@ -117,10 +119,10 @@ if you want you can set the output folder for the imported images
     }
 ...
 ```
-## Create Another HTML Page:
-At first we need to modify the configuration files
-1. Сreate a directory in `./src/` for future pages, for ex: `views`
-2. Edit `./config/path.js`
+
+## Create another HTML Page:
+1. Сreate a directory in `./src/` for future pages, for ex: `views` then we need to modify the configuration files
+2. Edit `./config/path.js`:
 ``` js
     ...
     // import file system module
@@ -138,7 +140,7 @@ At first we need to modify the configuration files
         PAGES
     }
 ```
-3. Edit `./config/webpack.default.config.js`
+3. Edit `./config/webpack.default.config.js`:
 ``` js
     ...
     // add the constants that we created earlier
@@ -158,7 +160,7 @@ At first we need to modify the configuration files
         ]
     }
  ```
- on this: 
+ - on this: 
  ``` js
     module.exports = {
         ...
@@ -173,3 +175,22 @@ At first we need to modify the configuration files
  ```
 4. Now you can create new page in a previously created folder `./src/views/`, for ex: `about.html`
 5. Open new page `http://localhost:8080/about.html` (Do not forget to restart the server)
+
+## Add your fonts:
+1. Put your font `./src/assets/fonts{your_font}`, for ex: Roboto
+2. Register new @font-face in `./src/assets/scss/{your_file}.scss`:
+``` scss
+// Example with Roboto
+@font-face {
+  font-family: "Roboto";
+  src: url('/assets/fonts/Roboto/Roboto.eot'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/Roboto/Roboto.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/Roboto/Roboto.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/fonts/Roboto/Roboto.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/Roboto/Roboto.svg') format('svg'); /* Legacy iOS */
+}
+```
+3. Then you can add new variable in `./src/assets/scss/utilities/variables.scss`:
+``` scss
+$myCustomFont : 'Roboto', Helvetica, sans-serif;
+```
