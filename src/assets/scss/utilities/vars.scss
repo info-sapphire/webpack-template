@@ -1,0 +1,44 @@
+$mainFont             : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$mainFontColor        : #000426;
+$mainFontSize         : 16px;
+$mainFontWeight       : 400;
+$mainLineHeight       : 1.4;
+
+$desktopWidth         : 1280px;
+$smDesktopWidth       : 980px;
+$tableWidth           : 768px;
+$phoneWidth           : 480px;
+$smPhoneWidth         : 320px;
+
+$phone                : 400px;
+$phone-wide           : 480px;
+$phablet              : 560px;
+$tablet-small         : 640px;
+$tablet               : 768px;
+$tablet-wide          : 1024px;
+$desktop              : 1248px;
+$desktop-wide         : 1440px;
+
+$sm                   : 540px;
+$md                   : 720px;
+$lg                   : 960px;
+$xl                   : 1140px;
+
+/* main color */
+$default-color        : #909399;
+$primary-color        : #409EFF;
+$success-color        : #67C23A;
+$danger-color         : #F56C6C;
+$warning-color        : #E6A23C;
+
+/* neutral color */
+$neutral-primary      : #303133;
+$neutral-regular      : #606266;
+$neutral-secondary    : #909399;
+$neutral-placeholder  : #C0C4CC;
+
+/* border color */
+$border-base          : #DCDFE6;
+$border-light         : #E4E7ED;
+$border-lighter       : #EBEEF5;
+$border-lightex       : #F2F6FC;

@@ -1,0 +1,49 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "clean webpack 4 template with instructions for connecting modules",
+  "scripts": {
+    "dev": "webpack-dev-server --open --config ./config/webpack.dev.config.js",
+    "build": "webpack --config ./config/webpack.build.config.js"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/info-sapphire/webpack-template.git"
+  },
+  "keywords": [
+    "webpack",
+    "webpack",
+    "4"
+  ],
+  "author": "Sapphire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/info-sapphire/webpack-template/issues"
+  },
+  "homepage": "https://github.com/info-sapphire/webpack-template#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.0",
+    "css-loader": "^3.3.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
