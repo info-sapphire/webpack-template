@@ -6,6 +6,14 @@
   </p>
 </div>
 
+- [How to install?](#installation)
+- [How to use?](#basic-usage)
+- [Project Structures](#project-structures)
+- [Path Configuration](#config-paths)
+- [Import JS Modules](#import-js-files)
+- [Add new html page](#create-another-html-page)
+- [Import custom fonts](#add-your-fonts)
+
 ## Installation:
 
 ``` bash
@@ -55,7 +63,7 @@ const PATHS = {
 };
 ```
 
-## Customize paths:
+### Customize paths:
 Change output folders:
 ``` js
 const PATHS = {
